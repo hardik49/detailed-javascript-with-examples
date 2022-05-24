@@ -1,0 +1,21 @@
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background-color: antiquewhite;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+code {
+  background-color: cornsilk;
+  display: block;
+  font-weight: lighter;
+  padding: 1rem;
+}

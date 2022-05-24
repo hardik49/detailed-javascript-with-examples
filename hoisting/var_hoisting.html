@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../style.css" rel="stylesheet" />
+    <script src="./var_hoisting.js" defer></script>
+    <title>Var Hoisting</title>
+  </head>
+  <body>
+    <section>
+      <h1>Var Hoisting</h1>
+      <summary>
+        Var is hoisted in memory by javascript. While calling it before
+        initiallize it is always undefined.
+      </summary>
+    </section>
+    <br />
+
+    <code>
+      console.log("a", a);<br />
+      var a = 10;
+      <br />
+      <i>a undefined</i>
+    </code>
+
+    <section>
+      <h1>Function Hoisting</h1>
+      <summary>
+        Function is hoisted in memory by javascript. <br />
+        <strong
+          >Note: Arrow function Or A function expression where function is
+          assigned to a variable will note be hoisted</strong
+        >
+      </summary>
+      <br />
+      <code>
+        b(); <br />
+        function b () { console.log("hi") }
+        <br />
+        <i>hi</i>
+      </code>
+    </section>
+    <br />
+    <section>
+      <h1>Arrow Function/ Function Expression Hoisting</h1>
+      <summary>
+        <strong
+          >Note: Arrow function Or A function expression assigned to let or
+          const will be hoisted in temporal dead zone hence throw reference
+          error. <br />
+          While assigning function to var will be hoisted but hoisted as
+          undefined hence throw TypeError: b is not function
+        </strong>
+      </summary>
+      <code>
+        b(); <br />
+        let b = () => { console.log("hi") }
+        <br />
+        <i> Uncaught ReferenceError: b is not defined</i>
+      </code>
+    </section>
+    <br />
+  </body>
+</html>
