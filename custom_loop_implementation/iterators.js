@@ -35,7 +35,6 @@ map(arr, (ele) => {
   }
 });
 
-
 // Filter
 const filter = (array, cb) => {
   const newArr = [];
